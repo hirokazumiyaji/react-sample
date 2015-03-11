@@ -1,0 +1,23 @@
+{
+  "name": "react-sample",
+  "version": "1.0.0",
+  "description": "React Sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/hirokazumiyaji/react-sample.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hirokazumiyaji/react-sample/issues"
+  },
+  "homepage": "https://github.com/hirokazumiyaji/react-sample",
+  "dependencies": {
+    "react": "^0.13.0",
+    "webpack": "^1.7.2"
+  }
+}
