@@ -6,17 +6,17 @@ var Category = React.createClass({
     onClick: React.PropTypes.func.isRequired
   },
   onClick: function () {
-    this.props.onClick(this.state.category.id);
+    this.props.onClick(this.props.category.id);
   },
   render: function () {
     var className = "category " + this.props.category.className;
     return (
-      <li className={className}><a onClick={this.onClick}></a></li>
+      <li className={className} onClick={this.onClick}></li>
     )
   }
 });
 
-var Categories = React.creatClass({
+var Categories = React.createClass({
   getInitialState: function () {
     return {
       "categories": [

@@ -18,6 +18,10 @@
   "homepage": "https://github.com/hirokazumiyaji/react-sample",
   "dependencies": {
     "react": "^0.13.0",
-    "webpack": "^1.7.2"
+    "webpack": "~1.7.3",
+    "gulp": "~3.8.11",
+    "gulp-clean": "~0.3.1",
+    "jsx-loader": "~0.12.2",
+    "gulp-util": "~3.0.4"
   }
 }

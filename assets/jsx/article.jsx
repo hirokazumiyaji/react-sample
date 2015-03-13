@@ -2,13 +2,13 @@ var React = require("react");
 
 var Article = React.createClass({
   propTypes: {
-    article: React.PropsTypes.object.isRequired,
-    isDetail: React.PropsTypes.bool.isRequired,
-    onClick: React.PropsTypes.func.isRequired
+    article: React.PropTypes.object.isRequired,
+    isDetail: React.PropTypes.bool.isRequired,
+    onClick: React.PropTypes.func.isRequired
   },
   onClick: function () {
     this.props.onClick(this.props.article.id);
-  }
+  },
   render: function () {
     if (this.props.isDetail) {
       return (
@@ -18,7 +18,8 @@ var Article = React.createClass({
         </section>
       )
     } else {
-      return <li className="article"><a onClick={this.onClick}>{this.props.article.title}</a></li>
+      className = "article " + this.props.article.category.className;
+      return <li className={className}><a onClick={this.onClick}>{this.props.article.title}</a></li>
     }
   }
 });
@@ -33,8 +34,7 @@ var Articles = React.createClass({
   },
   render: function () {
     var articles = this.props.articles.map((article) => {
-      var isDetail = false;
-      return <Article article={article} isDetail={isDetail} onClick={this.onSelect} />
+      return <Article article={article} isDetail={false} onClick={this.onSelect} />
     });
 
     return (

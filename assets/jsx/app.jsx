@@ -1,22 +1,23 @@
 var React = require("react"),
-    Articles = require("article").Articles,
-    Article = require("article").Article,
-    Categories = require("category");
+    Articles = require("./article").Articles,
+    Article = require("./article").Article,
+    Categories = require("./category");
 
 
 var App = React.createClass({
   getInitialState: function () {
     return {
       isList: true,
-      articles: window._strings,
+      articles: window._strings.articles,
       selectArticle: null,
       selectCateory: 0
+    }
   },
   onSelectCategory: function (categoryId) {
     this.setState({
       isList: true,
-      articles: window._strings.filter((article) => {
-        return article.category.id == categoryId;
+      articles: window._strings.articles.filter((article) => {
+        return categoryId == 0 || article.category.id == categoryId;
       })
     });
   },
@@ -25,12 +26,12 @@ var App = React.createClass({
       isList: false,
       selectArticle: this.state.articles.filter((article) => {
         return article.id == articleId;
-      })[0];
+      })[0]
     });
   },
   render: function () {
     var content;
-    if (isList) {
+    if (this.state.isList) {
       content = <Articles articles={this.state.articles} onSelect={this.onSelectArticle} />
     } else {
       var isDetail = true;
@@ -39,11 +40,13 @@ var App = React.createClass({
 
     return (
       <div>
-        <Categories onSelect={this.onSelectCategory} />
+        <header>
+          <Categories onSelect={this.onSelectCategory} />
+        </header>
         {content}
       </div>
     );
   }
 });
 
-React.render(<App />, document.getElementById("content");
+React.render(<App />, document.getElementById("content"));

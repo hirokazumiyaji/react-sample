@@ -4,35 +4,61 @@
     <title>React Sample</title>
     <style type="text/css">
       .site-wrapper {
-        background-color: "#E6E6E6";
         width: 100%;
+        background-color: #E6E6E6;
       }
       .content-wrapper {
         margin-left: 10%;
         margin-right: 10%;
       }
       .white-container {
-        background-color: "";
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        margin: 0 auto 50px;
       }
       .all {
-        background-color: "#424242";
+        background-color: #F781F3;
       }
       .red {
-        background-color: "#F78181";
+        background-color: #F78181;
       }
       .orange {
-        background-color: "#F7BE81";
+        background-color: #F7BE81;
       }
       .yellow {
-        background-color: "#F3F781";
+        background-color: #F3F781;
       }
       .green {
-        background-color: "#BEF781";
+        background-color: #BEF781;
       }
       .blue {
-        background-color: "#81BEF7";
+        background-color: #81BEF7;
       }
       .title {
+      }
+      ul {
+        list-style-type: none;
+      }
+      .categories li {
+        display: inline-block;
+        padding: 50px;
+        margin: 10px;
+        border-radius: 50px;
+      }
+      .categories:after {
+        clear: both;
+      }
+      .articles {
+      }
+      .articles li {
+        border-top: 1px solid #F5F5F5;
+      }
+      .articles li:first-child {
+        border: none;
+      }
+      .articles li a {
+        display: block;
+        padding: 50px 40px;
       }
     </style>
     <script>
@@ -41,7 +67,7 @@
           {
             "category": {
               "className": "orange",
-              "id": 1,
+              "id": 2,
               "name": "orange"
             },
             "content": "",
@@ -51,7 +77,7 @@
           {
             "category": {
               "className": "yellow",
-              "id": 2,
+              "id": 3,
               "name": "yellow"
             },
             "content": "",
@@ -61,7 +87,7 @@
           {
             "category": {
               "className": "yellow",
-              "id": 2,
+              "id": 3,
               "name": "yellow"
             },
             "content": "",
@@ -71,7 +97,7 @@
           {
             "category": {
               "className": "yellow",
-              "id": 2,
+              "id": 3,
               "name": "yellow"
             },
             "content": "",
@@ -81,7 +107,7 @@
           {
             "category": {
               "className": "orange",
-              "id": 1,
+              "id": 2,
               "name": "orange"
             },
             "content": "",
@@ -91,7 +117,7 @@
           {
             "category": {
               "className": "green",
-              "id": 3,
+              "id": 4,
               "name": "green"
             },
             "content": "",
@@ -101,7 +127,7 @@
           {
             "category": {
               "className": "blue",
-              "id": 4,
+              "id": 5,
               "name": "blue"
             },
             "content": "",
@@ -111,7 +137,7 @@
           {
             "category": {
               "className": "orange",
-              "id": 1,
+              "id": 2,
               "name": "orange"
             },
             "content": "",
@@ -121,7 +147,7 @@
           {
             "category": {
               "className": "green",
-              "id": 3,
+              "id": 4,
               "name": "green"
             },
             "content": "",
@@ -131,7 +157,7 @@
           {
             "category": {
               "className": "green",
-              "id": 3,
+              "id": 4,
               "name": "green"
             },
             "content": "",
